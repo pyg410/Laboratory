@@ -89,3 +89,53 @@ footer {
         margin: 0 10px;
     }
 }
+
+@media (max-width: 480px) {
+    header {
+        padding: 5px 0;
+        font-size: 1.2em;
+    }
+
+    .sidebar {
+        padding: 10px;
+    }
+
+    .content {
+        margin: 5px;
+        padding: 10px;
+    }
+
+    .footer-border {
+        margin: 0 5px;
+    }
+
+    footer {
+        padding: 10px 0;
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 360px) {
+    header {
+        padding: 5px 0;
+        font-size: 1em;
+    }
+
+    .sidebar {
+        padding: 5px;
+    }
+
+    .content {
+        margin: 5px;
+        padding: 5px;
+    }
+
+    .footer-border {
+        margin: 0 5px;
+    }
+
+    footer {
+        padding: 5px 0;
+        font-size: 0.7em;
+    }
+}
