@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #444;
+    color: white;
+    padding: 15px;
+    height: 100vh; /* 화면 높이의 100% */
+    box-sizing: border-box; /* 패딩을 포함한 박스 크기 설정 */
+    border-bottom-right-radius: 15px; /* 오른쪽 아래 부분 뭉툭하게 */
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin: 10px 0;
+}
+
+.sidebar nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.content {
+    flex: 1;
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.container {
+    margin-bottom: 20px;
+}
+
+.footer-border {
+    border-top: 2px solid #444;
+    margin: 0 20px;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto; /* 높이를 자동으로 조절 */
+        border-bottom-right-radius: 0; /* 모바일에서 둥근 모서리 제거 */
+        border-bottom-left-radius: 15px; /* 모바일에서 왼쪽 아래 부분 뭉툭하게 */
+    }
+
+    .content {
+        margin: 10px;
+        border-radius: 8px 8px 0 0; /* 모바일에서 상단 둥근 모서리 */
+    }
+
+    .footer-border {
+        margin: 0 10px;
+    }
+}

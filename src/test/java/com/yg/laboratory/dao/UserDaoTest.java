@@ -5,7 +5,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
@@ -20,9 +19,10 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 @ContextConfiguration(classes = DaoFactory.class) //  테스트 중에는 하나의 어플리케이션 컨텍스트가 공유된다.
 public class UserDaoTest {
 
-    @Autowired
-    private ApplicationContext context; // AppContext 자체도 빈으로 등록되기 때문에 DI가 가능하다.
+//    @Autowired
+//    private ApplicationContext context; // AppContext 자체도 빈으로 등록되기 때문에 DI가 가능하다.
 
+    @Autowired
     private UserDao dao;
     private User user1;
     private User user2;
@@ -30,7 +30,7 @@ public class UserDaoTest {
 
     @BeforeEach
     public void setUp(){
-        this.dao = context.getBean("userDao", UserDao.class);
+//        this.dao = context.getBean("userDao", UserDao.class);
         this.user1 = new User("gyumee", "아아", "springno1");
         this.user2 = new User("leegw700", "ㅇㅇㅇ", "springno2");
         this.user3 = new User("bumjin", "ㅇㅇㅇㅇㅇ", "springno3");
