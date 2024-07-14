@@ -76,8 +76,7 @@ window.addEventListener('load', function() {
         blob.style.width = (curveX + 60) + 'px';
 
         hamburger.style.transform = 'translate(' + curveX + 'px, ' + curveY + 'px)';
-
-        document.querySelector('h2').style.transform = 'translateY(' + curveY + 'px)';
+        $('h2').css('transform', 'translateY('+curveY+'px)');
         window.requestAnimationFrame(svgCurve);
     }
 
