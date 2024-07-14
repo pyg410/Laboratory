@@ -19,6 +19,18 @@ header {
 h1 {
     max-width: 300px;
 }
+
+@keyframes backgroundAnimation {
+    0% {
+        background-size: 0 100%;
+    }
+    50% {
+        background-size: 100% 100%;
+    }
+    100% {
+        background-size: 100% 0;
+    }
+}
 h1 a{
     width: 100%;
     background-image: linear-gradient(
@@ -31,10 +43,11 @@ h1 a{
     background-size: 0 100%;
     background-repeat: no-repeat;
     transition: 250ms linear;
+    animation: backgroundAnimation 3s linear infinite;
 }
-h1 a:hover{
-    background-size: 100% 100%;
-}
+/*h1 a:hover{*/
+/*    background-size: 100% 100%;*/
+/*}*/
 
 
 .container {
