@@ -9,7 +9,7 @@ import java.util.List;
 
 @Controller
 public class HomeController {
-    private static final String BLOG_TITLE = "코딩 실험실";
+    private static final String BLOG_TITLE = "Code Laboratory";
 
     private static final String BLOG_DESCRIPTION = "이것저것 재밌는 코딩 실험을 하는 자유로운 공간입니다.";
 
