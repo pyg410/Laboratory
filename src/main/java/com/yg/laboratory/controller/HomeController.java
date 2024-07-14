@@ -23,15 +23,4 @@ public class HomeController {
         model.addAttribute("boards", boards);
         return "home";
     }
-
-    @GetMapping("/home1")
-    public String home1(Model model){
-        model.addAttribute("title", BLOG_TITLE);
-        model.addAttribute("description", BLOG_DESCRIPTION);
-
-        // 게시판 목록 추가
-        List<String> boards = Arrays.asList("General", "Technology", "Lifestyle", "Travel", "Food");
-        model.addAttribute("boards", boards);
-        return "home1";
-    }
 }
