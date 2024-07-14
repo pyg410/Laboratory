@@ -19,7 +19,7 @@ public class HomeController {
         model.addAttribute("description", BLOG_DESCRIPTION);
 
         // 게시판 목록 추가
-        List<String> boards = Arrays.asList("General", "Technology", "Lifestyle", "Travel", "Food");
+        List<String> boards = Arrays.asList("뚝딱뚝딱", "만드는 중", "조금만", "기다려주세요");
         model.addAttribute("boards", boards);
         return "home";
     }
