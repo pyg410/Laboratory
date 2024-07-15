@@ -14,7 +14,6 @@ header {
     align-items: center;
     padding: 10px 0;
     text-align: center;
-    /*font-family: 'Righteous', cursive;*/
 }
 
 h1 {
@@ -37,23 +36,11 @@ h1 {
 }
 h1 a{
     width: 100%;
-    /*background-image: linear-gradient(*/
-    /*        to bottom,*/
-    /*        rgba(184, 216, 190, 0) 50%,*/
-    /*        rgba(184, 216, 190, 1) 50%,*/
-    /*        rgba(184, 216, 190, 1) 60%,*/
-    /*        rgba(184, 216, 190, 0) 60%*/
-    /*);*/
     background-size: 0 100%;
     background-repeat: no-repeat;
     transition: 250ms linear;
     animation: neon2-4 3s infinite;
-    /*animation: bgNeon-4 3s infinite;*/
-    /*animation: backgroundAnimation 3s linear infinite;*/
 }
-/*h1 a:hover{*/
-/*    background-size: 100% 100%;*/
-/*}*/
 
 
 .container {
