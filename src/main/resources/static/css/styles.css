@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Monoton);
 body {
     font-family: Arial, sans-serif;
     padding: 0;
@@ -6,18 +7,21 @@ body {
 }
 
 header {
-    background-color: #333;
+    background-color: #333333;
     display: flex;
     color: white;
     justify-content: center;
     align-items: center;
     padding: 10px 0;
     text-align: center;
-    font-family: 'Righteous', cursive;
+    /*font-family: 'Righteous', cursive;*/
 }
 
 h1 {
     max-width: 300px;
+    font-family: 'Monoton', cursive;
+    font-weight: normal;
+
 }
 
 @keyframes backgroundAnimation {
@@ -33,17 +37,19 @@ h1 {
 }
 h1 a{
     width: 100%;
-    background-image: linear-gradient(
-            to bottom,
-            rgba(184, 216, 190, 0) 50%,
-            rgba(184, 216, 190, 1) 50%,
-            rgba(184, 216, 190, 1) 60%,
-            rgba(184, 216, 190, 0) 60%
-    );
+    /*background-image: linear-gradient(*/
+    /*        to bottom,*/
+    /*        rgba(184, 216, 190, 0) 50%,*/
+    /*        rgba(184, 216, 190, 1) 50%,*/
+    /*        rgba(184, 216, 190, 1) 60%,*/
+    /*        rgba(184, 216, 190, 0) 60%*/
+    /*);*/
     background-size: 0 100%;
     background-repeat: no-repeat;
     transition: 250ms linear;
-    animation: backgroundAnimation 3s linear infinite;
+    animation: neon2-4 3s infinite;
+    /*animation: bgNeon-4 3s infinite;*/
+    /*animation: backgroundAnimation 3s linear infinite;*/
 }
 /*h1 a:hover{*/
 /*    background-size: 100% 100%;*/
@@ -200,4 +206,32 @@ h2 {
     }
 
 
+}
+
+@keyframes neon2-4 {
+    0% {
+        color: #0491d2;
+        text-shadow: 0 0 10px #0491d2, 1px 1px #6BC3FF, 0 0 280px #0C4D7D;
+    }
+    80%, 81%, 95%, 97%, 98% {
+        color: #0491d2;
+        text-shadow: 0 0 10px #0491d2, 1px 1px #6BC3FF, 0 0 280px #0C4D7D;
+    }
+    82%, 96% {
+        color: #222;
+        text-shadow: 0 0 10px #000, 1px 1px rgb(99, 74, 82), -2px 0px 4px #29121A;
+    }
+    94%, 99%, 100% {
+        color: #222;
+        text-shadow: 0 0 10px #000, 1px 1px rgb(99, 74, 82), -2px 0px 4px #29121A;
+    }
+}
+
+@keyframes bgNeon-4 {
+    0%, 80%, 95%, 97%, 98%, 100% {
+        background-color: #0C4D7D;
+    }
+    81%, 94%, 96%, 99% {
+        background-color: #111;
+    }
 }
