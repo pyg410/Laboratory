@@ -23,8 +23,4 @@ public class HomeController {
         model.addAttribute("boards", boards);
         return "home";
     }
-    @GetMapping("/home1")
-    public String home1(Model model){
-        return "home1";
-    }
 }
