@@ -9,3 +9,5 @@
 - 2024/07/11 : docker&git actions CI/CD
 - 2024/07/14 : Home 화면
 - 2024/07/15 : Grafana, Prometheus, Actuator 모니터링 구축
+- 2024/07/15 : Nginx 포트포워딩
+- 2024/07/24 : 게시판/게시글
