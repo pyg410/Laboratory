@@ -1,4 +1,4 @@
-package com.yg.laboratory.controller;
+package com.yg.laboratory.domain;
 
 public class Post {
 
