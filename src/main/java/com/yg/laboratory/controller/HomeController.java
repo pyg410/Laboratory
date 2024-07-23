@@ -1,15 +1,20 @@
 package com.yg.laboratory.controller;
 
+import com.yg.laboratory.dao.BoardDto;
+import com.yg.laboratory.service.BoardService;
 import com.yg.laboratory.util.Home;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import java.util.Arrays;
 import java.util.List;
 
 @Controller
+@RequiredArgsConstructor
 public class HomeController {
+
+    private final BoardService boardService;
 
 
     @GetMapping("/")
@@ -18,7 +23,8 @@ public class HomeController {
         model.addAttribute("description", Home.BLOG_DESCRIPTION);
 
         // 게시판 목록 추가
-        List<String> boards = Arrays.asList("뚝딱뚝딱", "만드는 중", "조금만", "기다려주세요");
+
+        List<BoardDto> boards = boardService.getBoardList();
         model.addAttribute("boards", boards);
         return "home";
     }
