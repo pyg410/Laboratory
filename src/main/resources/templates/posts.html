@@ -1,10 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title th:text="${title}">게시글</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
 </head>
 <body>
-
+<header>
+    <h1><a th:href="@{/}" th:text="${title}" style="color: inherit; text-decoration: none;">코딩 실험실 입니다.</a></h1>
+</header>
+<div class="container">
+    <div id="menu" class="menu">
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <div class="menu-inner">
+            <ul>
+                <li th:each="board : ${boards}">
+                    <a th:href="@{/board/{id}(id=${board.id})}" th:text="${board.name}">게시판 이름</a>
+                </li>
+            </ul>
+        </div>
+        <svg id="blob" xmlns="http://www.w3.org/2000/svg">
+            <path id="blob-path" d="M60,500H0V0h60c0,0,20,172,20,250S60,900,60,500z"/>
+        </svg>
+    </div>
+    <h2> 왼쪽을 터치하면 메뉴가 나옵니다! </h2>
+    <main class="content">
+        <h3 th:text="${post.title}">게시글 제목</h3>
+        <p th:text="${post.content}">게시글 내용</p>
+        <p>조회수: <span th:text="${post.views}">0</span></p>
+        <!-- 게시글 수정, 삭제 버튼 등 -->
+    </main>
+</div>
+<div class="footer-border"></div>
+<footer>
+    <p>&copy; 2024 YG's laboratory</p>
+</footer>
 </body>
 </html>
