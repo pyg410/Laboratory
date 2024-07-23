@@ -126,7 +126,7 @@ footer {
     bottom: 0;
 }
 
-ul {
+.boards-list {
     padding: 0;
     list-style: none;
     width: 80%;
@@ -135,7 +135,7 @@ ul {
     top: 10px;
 }
 
-ul li {
+.boards-list li {
     color: #fff;
     font-family: sans-serif;
     padding: 20px 0;
@@ -183,7 +183,7 @@ h2 {
 
     .menu.expanded {
         transform: translateX(0%);
-        left: 0px;
+        left: 0;
     }
 
     .menu-inner {
@@ -206,11 +206,11 @@ h2 {
     }
     82%, 96% {
         color: #222;
-        text-shadow: 0 0 10px #000, 1px 1px rgb(99, 74, 82), -2px 0px 4px #29121A;
+        text-shadow: 0 0 10px #000, 1px 1px rgb(99, 74, 82), -2px 0 4px #29121A;
     }
     94%, 99%, 100% {
         color: #222;
-        text-shadow: 0 0 10px #000, 1px 1px rgb(99, 74, 82), -2px 0px 4px #29121A;
+        text-shadow: 0 0 10px #000, 1px 1px rgb(99, 74, 82), -2px 0 4px #29121A;
     }
 }
 
@@ -221,4 +221,46 @@ h2 {
     81%, 94%, 96%, 99% {
         background-color: #111;
     }
+}
+
+/* 게시글 목록 스타일 */
+ul.post-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.post-list li {
+    padding: 10px;
+    margin: 5px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+ul.post-list li a {
+    text-decoration: none;
+    color: #333;
+}
+
+ul.post-list li a:hover {
+    text-decoration: underline;
+}
+
+/* 페이지네이션 스타일 */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination a {
+    margin: 0 5px;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.pagination a:hover {
+    background-color: #f1f1f1;
 }
