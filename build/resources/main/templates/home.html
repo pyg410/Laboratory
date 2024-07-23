@@ -21,9 +21,9 @@
             <div class="line"></div>
         </div>
         <div class="menu-inner">
-            <ul>
+            <ul class="boards-list">
                 <li th:each="board : ${boards}">
-                    <a th:href="@{/}" th:text="${board}">게시판 이름</a>
+                    <a th:href="@{/{url}(url=${board.url})}" th:text="${board.name}">게시판 이름</a>
                 </li>
             </ul>
         </div>
