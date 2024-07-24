@@ -5,10 +5,10 @@ import com.yg.laboratory.domain.Post;
 import com.yg.laboratory.service.BoardService;
 import com.yg.laboratory.util.Home;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageImpl;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
+//import org.springframework.data.domain.Page;
+//import org.springframework.data.domain.PageImpl;
+//import org.springframework.data.domain.PageRequest;
+//import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -46,10 +46,11 @@ public class BoardController {
         model.addAttribute("posts", posts);
 
         int pageSize = 5;
-        Pageable pageable = PageRequest.of(page - 1, pageSize);
-        Page<Post> postPage = new PageImpl<>(posts, pageable, pageSize);
+//        Pageable pageable = PageRequest.of(page - 1, pageSize);
+//        Page<Post> postPage = new PageImpl<>(posts, pageable, pageSize);
         model.addAttribute("currentPage", page);
-        model.addAttribute("totalPages", postPage.getTotalPages());
+//        model.addAttribute("totalPages", postPage.getTotalPages());
+        model.addAttribute("totalPages", 1);
 
         return "boards";
     }

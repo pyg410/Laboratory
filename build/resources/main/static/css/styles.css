@@ -183,7 +183,7 @@ h2 {
 
     .menu.expanded {
         transform: translateX(0%);
-        left: 0px;
+        left: 0;
     }
 
     .menu-inner {
@@ -206,11 +206,11 @@ h2 {
     }
     82%, 96% {
         color: #222;
-        text-shadow: 0 0 10px #000, 1px 1px rgb(99, 74, 82), -2px 0px 4px #29121A;
+        text-shadow: 0 0 10px #000, 1px 1px rgb(99, 74, 82), -2px 0 4px #29121A;
     }
     94%, 99%, 100% {
         color: #222;
-        text-shadow: 0 0 10px #000, 1px 1px rgb(99, 74, 82), -2px 0px 4px #29121A;
+        text-shadow: 0 0 10px #000, 1px 1px rgb(99, 74, 82), -2px 0 4px #29121A;
     }
 }
 
