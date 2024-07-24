@@ -60,8 +60,8 @@ jobs:
         run: sudo docker stop $(sudo docker ps -f 'name=ygblog' -q) 2>/dev/null || true
 
       # 2-2. 기존 컨테이너 삭제
-      - name: docker rm container
-        run: sudo docker rm $(sudo docker ps -al -f 'name=ygblog' -q) 2>/dev/null || true
+      #- name: docker rm container
+      #  run: sudo docker rm $(sudo docker ps -al -f 'name=ygblog' -q) 2>/dev/null || true
 
       # 3. 최신 이미지를 컨테이너화하여 실행
       - name: docker run new container
