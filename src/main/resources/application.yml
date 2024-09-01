@@ -6,7 +6,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: "*"
+        include: threadpool
 
 server:
   tomcat:
