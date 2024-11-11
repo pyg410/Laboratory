@@ -2,13 +2,13 @@ spring:
   application:
     name: laboratory
 
-#management:
-#  endpoints:
-#    web:
-#      exposure:
-#        include: "*"
-#
-#server:
-#  tomcat:
-#    mbeanregistry:
-#      enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: threadpool
+
+server:
+  tomcat:
+    mbeanregistry:
+      enabled: true
