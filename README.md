@@ -11,3 +11,4 @@
 - 2024/07/15 : Grafana, Prometheus, Actuator 모니터링 구축
 - 2024/07/15 : Nginx 포트포워딩
 - 2024/07/24 : 게시판/게시글
+- 2024/11/12 : mysql8.x 세팅, Tomcat ThreadPool monitoring
